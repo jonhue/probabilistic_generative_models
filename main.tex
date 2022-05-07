@@ -159,10 +159,6 @@ As mentioned, we cannot compute $\s{\pi}$ directly, nor can we compute the Jense
     \s{\vtheta} = \argmin_\vtheta \ell(\vtheta, \s{\vphi}), \quad \s{\vphi} = \argmax_\vphi \ell(\s{\vtheta}, \vphi).
 \end{align} This formulation of generative models is known as \emph{Generative Adversarial Networks} (GANs). We can think of this problem as a two player game with the generator trying to choose $\vtheta$ so as to minimize the loss and the adversary (i.e., the discriminator) trying to choose $\vphi$ so as to maximize the loss.
 
-% \subsection{Inference}
-
-% TBC
-
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/faces_gans.png}
     \caption{An example of faces constructed by a generative adversarial model, StyleGAN. Taken from \citep{karras2019style}.}
