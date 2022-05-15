@@ -76,7 +76,7 @@ The regularization term $\E[\vz \sim q]{\log \frac{q(\vz)}{p(\vz)}}$ is also cal
     \caption{A variational autoencoder learns an inference model and generative model simultaneously. The learned inference model is used to produce encodings from which the generative model should produce patterns.}
 \end{figure}
 
-The key idea of variational autoencoders is to simultaneously learn a generative model $p_\vtheta$ and inference model $q_\vpsi$ simultaneously. So given a pattern $\vx$ sampled according to the true distribution of patterns $p$, the objective to be maximized is, \begin{align}
+The key idea of variational autoencoders is to simultaneously learn a generative model $p_\vtheta$ and inference model $q_\vpsi$. So given a pattern $\vx$ sampled according to the true distribution of patterns $p$, the objective to be maximized is, \begin{align}
     \log p_\vtheta(\vx) \gtrapprox  \E[\vz \sim q_\vpsi(\cdot \mid \vx)]{\log p_\vtheta(\vx \mid \vz)} - \KL{q_\vpsi(\cdot \mid \vx)}{p} \eqdef \ell(\vtheta, \vpsi; \vx).
 \end{align} The KL-divergence can often be expressed analytically, and we can use a sample-based approximation for the expectation.
 
